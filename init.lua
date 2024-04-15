@@ -896,9 +896,11 @@ require('lazy').setup({
   },
   {
     'tpope/vim-fugitive',
+    vim.keymap.set('n', '<leader>gs', vim.cmd.Git, { desc = '[g]it [s]tatus fugitive' }),
   },
   {
     'mbbill/undotree',
+    vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = '[u]ndotree' }),
   },
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
