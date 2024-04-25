@@ -15,11 +15,12 @@ local M = {
     require('nvim-tree').setup(opts)
   end,
   opts = {
-    on_attach = my_on_attach,
+    -- on_attach = my_on_attach,
     filters = {
       dotfiles = false,
       custom = {
         '^\\.git$',
+        '^\\.ruff_cache$',
       },
     },
   },

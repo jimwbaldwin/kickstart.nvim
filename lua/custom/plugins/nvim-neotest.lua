@@ -9,11 +9,25 @@ local M = {
   },
   config = function()
     require('neotest').setup {
-      adapters = {
-        require 'neotest-python' {
-          runner = 'pytest',
-        },
-      },
+      adapters = { require 'neotest-python' { runner = 'pytest' } },
+      --     keys = {
+      --       {
+      --         '<leader>nt',
+      --         function()
+      --           require('neotest').summary.open()
+      --           vim.cmd [[Neotest run]]
+      --           -- require('neotest').run.run(vim.fn.expand('%'))
+      --         end,
+      --         desc = 'Neotest toggle',
+      --       },
+      --       {
+      --         '<leader>np',
+      --         function()
+      --           require('neotest').output_panel.toggle()
+      --         end,
+      --         desc = 'Neotest output_panel toggle',
+      --       },
+      --     },
     }
   end,
 }
